@@ -6,7 +6,7 @@ maven 'maven 3.5.2'
   stages {
     stage('Build') {
         steps {
-            sh 'mvn -B -DskipTests clean install'
+            sh 'mvn verify -Pperformance'
         }
     }
   }
