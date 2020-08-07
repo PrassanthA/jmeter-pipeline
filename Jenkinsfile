@@ -10,7 +10,11 @@ args '-v/root/.m2:/root/.m2'
      stage('Selinium Test') {
        
         steps {
-            sh 'mvn Clean verify'
+            sh 
+          ...
+            'cd MavenSelinum'
+            'mvn Clean verify'
+          ...
         }
        
     stage('Performance Test') {
